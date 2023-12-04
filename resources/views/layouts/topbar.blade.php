@@ -7,7 +7,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <span class="fw-bold text-dark pl-3" style="color: #666;">Hello, MM Storyteller Team!</span>
+                    <span class="fw-bold text-dark pl-3" style="color: #666;">Hello, Delight Team!</span>
 
 
                     <!-- Topbar Navbar -->

@@ -34,7 +34,6 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    {{-- <img src="{{ asset('assets/img/Icons/User Management.svg') }}" class="mr-1 mb-1" width="18px" alt=""> --}}
                     <i class="fas fa-fw fa-users"></i>
                     <span>User Management</span>
                 </a>
@@ -42,14 +41,26 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">User Components:</h6>
                         @if (Auth::user()->role == "Admin")
-                        <a class="collapse-item" href="{{ url('/admin/superAdmins/') }}"><img class="mr-1 text-dark" src="{{ asset('assets/img/Icons/Super Admins.svg') }}" width="18px" alt="">Admins</a>
-                        <a class="collapse-item" href="{{ url('/admin/authors/') }}"><img class="mr-1 text-dark" src="{{ asset('assets/img/Icons/Author.svg') }}" width="18px" alt="">Masters</a>
+                        <a class="collapse-item" href="{{ route('adminList') }}">
+                            <i class="fas fa-users mr-2"></i>
+                            Admins
+                        </a>
+                        <a class="collapse-item" href="{{ route('masterList') }}">
+                            <i class="fas fa-users mr-2"></i>
+                            Masters
+                        </a>
                         @endif
                         @if (Auth::user()->role == "Master" || Auth::user()->role == "Admin")
-                        <a class="collapse-item" href="{{ url('/admin/users/') }}"><img class="mr-1 text-dark" src="{{ asset('assets/img/Icons/user lists.svg') }}" width="18px" alt="">Agents</a>
+                        <a class="collapse-item" href="{{ route('agentList') }}">
+                            <i class="fas fa-users mr-2"></i>
+                            Agents
+                        </a>
                         @endif
                         @if (Auth::user()->role == "Agent" || Auth::user()->role == "Admin")
-                        <a class="collapse-item" href="{{ url('/admin/pending-list/') }}"><img class="mr-1 text-dark" src="{{ asset('assets/img/Icons/Pending List.svg') }}" width="18px" alt="">Users</a>
+                        <a class="collapse-item" href="{{ route('userList') }}">
+                            <i class="fas fa-users mr-2"></i>
+                            Users
+                        </a>
                         @endif
                     </div>
                 </div>
