@@ -15,7 +15,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/admin') }}">
+                <a class="nav-link" href="{{ route('home') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     {{-- <img class="mr-1" src="{{ asset('assets/img/Icons/Dashboard.svg') }}" width="18px" alt=""> --}}
                     <span>Dashboard</span>
